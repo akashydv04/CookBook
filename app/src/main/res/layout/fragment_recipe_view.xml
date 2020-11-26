@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.RecipeView">
+
+
+    <ImageView
+        android:id="@id/dish_image"
+        android:layout_width="135dp"
+        android:layout_height="160dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@id/dish_name"
+        android:layout_toEndOf="@id/dish_image"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="Dish Name" />
+    <TextView
+        android:id="@+id/prepare_time"
+        android:layout_toEndOf="@id/dish_image"
+        android:layout_below="@id/dish_name"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="16sp"
+        android:text="Prepare Time:" />
+    <TextView
+        android:id="@+id/prepare_time_txt"
+        android:layout_toEndOf="@id/prepare_time"
+        android:layout_below="@id/dish_name"
+        android:layout_marginStart="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="16sp"
+        android:text="10 min" />
+    <TextView
+        android:id="@+id/cooking_time"
+        android:layout_toEndOf="@id/dish_image"
+        android:layout_below="@id/prepare_time"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="16sp"
+        android:text="Cooking Time:" />
+    <TextView
+        android:id="@+id/cooking_time_txt"
+        android:layout_toEndOf="@id/cooking_time"
+        android:layout_below="@id/prepare_time_txt"
+        android:layout_marginStart="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="16sp"
+        android:text="10 min" />
+    <TextView
+        android:id="@+id/total_time"
+        android:layout_toEndOf="@id/dish_image"
+        android:layout_below="@id/cooking_time"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="16sp"
+        android:text="Total Time:" />
+    <TextView
+        android:id="@+id/total_time_txt"
+        android:layout_toEndOf="@id/total_time"
+        android:layout_below="@id/cooking_time_txt"
+        android:layout_marginStart="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="16sp"
+        android:text="10 min" />
+    <TextView
+        android:id="@+id/ingredients_view"
+        android:layout_below="@id/total_time"
+        android:layout_marginStart="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Ingredients :" />
+    <TextView
+        android:id="@+id/ingredients_view_txt"
+        android:layout_below="@id/ingredients_view"
+        android:layout_marginStart="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Ingredients :" />
+</RelativeLayout>

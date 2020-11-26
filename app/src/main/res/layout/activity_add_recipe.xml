@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddRecipe">
+
+    <include
+        android:id="@id/custom_toolbar_space"
+        layout="@layout/custom_toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/watermark"
+        android:alpha="0.3"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:layout_below="@id/custom_toolbar_space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/cuisine_name_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Enter Cuisine Name"/>
+        <Button
+            android:id="@+id/add_cuisine_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Add Cuisine"/>
+
+        <Spinner
+            android:id="@+id/cuisine_spin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/edt_dish_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dish Name"
+            android:inputType="text"/>
+        <EditText
+            android:id="@+id/edt_ingrediants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:inputType="textCapSentences|textMultiLine"
+            android:hint="Ingrediants"/>
+        <EditText
+            android:id="@+id/edt_preparation_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Preparation time in minutes"/>
+        <EditText
+            android:id="@+id/edt_cooking_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Cooking time in minutes"/>
+        <EditText
+            android:id="@+id/edt_total_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Total time in minutes"/>
+
+        <EditText
+            android:id="@+id/pick_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_baseline_image_24"
+            android:hint="Pick Image"
+            android:focusable="false"/>
+
+        <Button
+            android:id="@+id/add_dish_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Add Dish Recipe"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

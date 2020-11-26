@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listCuisine">
+
+    <fragment
+        android:id="@+id/listCuisine"
+        android:name="com.akash.cookbook.fragment.ListCuisine"
+        android:label="fragment_list_cuisine"
+        tools:layout="@layout/fragment_list_cuisine" >
+        <action
+            android:id="@+id/action_listCuisine_to_dishFragment"
+            app:destination="@id/dishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dishFragment"
+        android:name="com.akash.cookbook.fragment.DishFragment"
+        android:label="fragment_dish"
+        tools:layout="@layout/fragment_dish" >
+        <argument
+            android:name="cuisine_name"
+            app:argType="string"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_dishFragment_to_recipeView"
+            app:destination="@id/recipeView" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeView"
+        android:name="com.akash.cookbook.fragment.RecipeView"
+        android:label="fragment_recipe_view"
+        tools:layout="@layout/fragment_recipe_view" >
+        <argument
+            android:name="dishName"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="cuisineName"
+            app:argType="string"
+            android:defaultValue="null" />
+    </fragment>
+</navigation>
